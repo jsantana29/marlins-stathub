@@ -1,0 +1,75 @@
+:root {
+  /* Define reusable CSS variables for consistent styling across the project */
+  --border-color: #ddd; /* Light gray color for table borders */
+  --header-bg: #b0b0b0; /* Grey background color for table headers */
+  --header-font-color: #008080; /* Teal font color for header text */
+  --row-bg: #f9f9f9; /* Light gray background for alternating table rows */
+  --hover-bg: #d6d6d6; /* Slightly darker gray background for row hover effect */
+}
+
+.roster-container {
+  /* Styles for the main container wrapping the tables */
+  padding: 1rem; /* Add padding around the container for spacing */
+  font-family: Arial, sans-serif; /* Set a clean, readable font for the text */
+}
+
+.roster-tables {
+  /* Styles for the container holding both tables */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack the tables vertically */
+  gap: 2rem; /* Add 2rem of space between the tables */
+  align-items: center; /* Center the tables horizontally within the container */
+}
+
+.roster-table {
+  /* General styles for the tables */
+  width: 100%; /* Allow the table to take up the full width of its container */
+  max-width: 1500px; /* Set a maximum width to prevent the table from becoming too wide */
+  border-collapse: separate; /* Use separate borders for better visibility */
+  border-spacing: 0; /* Remove extra spacing between table cells */
+  margin: 0 auto; /* Center the table horizontally */
+  font-size: 13px; /* Set a slightly smaller font size for a compact look */
+  table-layout: auto; /* Allow columns to adjust dynamically based on content */
+}
+
+.roster-table th,
+.roster-table td {
+  /* Shared styles for table header cells (th) and regular cells (td) */
+  border: 1px solid var(--border-color); /* Add a light gray border around each cell */
+  text-align: center; /* Center-align the text within the cells */
+  padding: 0.4rem; /* Add compact padding inside each cell */
+  overflow: visible; /* Ensure content is fully visible within the cells */
+  white-space: normal; /* Allow text to wrap onto multiple lines if necessary */
+}
+
+.roster-table th {
+  /* Specific styles for table header cells */
+  background-color: var(--header-bg); /* Set a grey background for the header row */
+  color: var(--header-font-color); /* Use teal font color for header text */
+  font-weight: bold; /* Make the header text bold for emphasis */
+  text-transform: uppercase; /* Convert header text to uppercase for a professional look */
+}
+
+.roster-table td {
+  /* Specific styles for regular table cells */
+  background-color: #fff; /* Set a white background for table rows */
+  color: #333; /* Use dark gray text for readability */
+}
+
+.roster-table tr:nth-child(even) td {
+  /* Styles for alternating rows to improve readability */
+  background-color: var(--row-bg); /* Apply a light gray background to even rows */
+}
+
+.roster-table tr:hover td {
+  /* Styles for the row hover effect */
+  background-color: var(--hover-bg); /* Change the background to a slightly darker gray when hovered */
+}
+
+.roster-table caption {
+  /* Styles for the table caption (if used) */
+  font-size: 14px; /* Set a slightly larger font size for the caption */
+  font-weight: bold; /* Make the caption text bold */
+  margin-bottom: 0.5rem; /* Add spacing below the caption */
+  text-align: center; /* Center-align the caption text */
+}
